@@ -12,6 +12,7 @@
   :author ""
   :license ""
   :depends-on (:plastic-toy-gun
+               :arnesi
                :http-ink)
   :components ((:module "src"
                 :components
