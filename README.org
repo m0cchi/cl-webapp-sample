@@ -11,6 +11,7 @@
    - arnesi
 
 ** Installation
+#+begin_src
    gem install qlgit
    qlgit install mocchit/plastic-toy-gun
    qlgit install mocchit/http-ink
@@ -18,3 +19,4 @@
    git clone git@github.com:mocchit/cl-webapp-sample.git
    cd cl-webapp-sample
    PORT=4567 HOST=0.0.0.0 ./run.ros
+#+end_src
