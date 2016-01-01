@@ -1,7 +1,20 @@
 * Web-App-Sample 
 
 ** Usage
+   ./run.ros
 
 ** Dependencies
+   - plastic-toy-gun
+     https://github.com/mocchit/plastic-toy-gun
+   - http-ink
+     https://github.com/mocchit/http-ink
+   - arnesi
 
 ** Installation
+   gem install qlgit
+   qlgit install mocchit/plastic-toy-gun
+   qlgit install mocchit/http-ink
+   qlgit install mocchit/cl-webapp-sample
+   git clone git@github.com:mocchit/cl-webapp-sample.git
+   cd cl-webapp-sample
+   PORT=4567 HOST=0.0.0.0 ./run.ros
