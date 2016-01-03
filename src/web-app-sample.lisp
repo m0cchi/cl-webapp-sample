@@ -5,20 +5,21 @@
                 :make-server
                 :start
                 :dispose
-                :*log*
                 :*debug-log*
                 :*cartridge*)
   (:import-from :http-ink
                 :ink
+                :*log*
                 :defroutes
                 :defroute
                 :*expire-time*)
   (:import-from :arnesi
                 :getenv )
+  (:import-from :http-ink.util
+                :set-public-dir)
   (:import-from :http-ink.response-util
                 :respond-with-html
-                :respond-with-file
-                :set-public-dir)
+                :respond-with-file)
   (:export :run))
 (in-package :web-app-sample)
 
@@ -28,13 +29,13 @@
                    "0.0.0.0"))
 ;; log
 (setq *log* t)
-(setq *debug-log* t)
+(setq *debug-log* nil)
 ;; 7days
 (setq *expire-time* (* 60 60 24 7))
 ;; use http server
 (setq *cartridge* #'ink)
 
-(http-ink.response-util:set-public-dir #p"./public")
+(set-public-dir #p"./public")
 
 (http-ink:defroutes
  (:get "/" () (respond-with-file http-ink::env "./public/index.html"))
